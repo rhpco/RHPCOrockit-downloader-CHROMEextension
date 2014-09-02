@@ -1,0 +1,32 @@
+{
+  "name": "RHPCO rockit.it free listener / DEMO version priv8 :P",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "FREE music, fuck the system",
+  "homepage_url": "http://www.ampland.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "http://rockit.it/*",
+    "http://*.rockit.it/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+	"http://www.rockit.it/*",
+	"http://*.rockit.it/*",
+	"http://*.rockit.it/*"
+      ],
+      "js": [
+        "src/inject/inject.js",
+		"js/jquery/jquery.js",
+		"js/md5.js"
+
+      ]
+    }
+  ]
+}
